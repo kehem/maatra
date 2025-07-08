@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAATRA - Social Organization</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f766e',    // Teal
+                        secondary: '#4b5563'   // Gray
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-10">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-primary font-bold text-2xl">MAATRA</div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#khourang" class="text-secondary hover:text-primary transition-colors">Thourang</a>
+                <a href="#lerik-leisu" class="text-secondary hover:text-primary transition-colors">Lerik-leisu</a>
+                <a href="#architects" class="text-secondary hover:text-primary transition-colors">Architects & Engineers</a>
+                <a href="#about" class="text-secondary hover:text-primary transition-colors">About Us</a>
+            </div>
+            
+            <button class="md:hidden text-primary">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="py-16 bg-gradient-to-r from-primary to-teal-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Building Communities, Creating Change</h1>
+            <p class="text-xl max-w-2xl mx-auto mb-8">MAATRA is dedicated to sustainable development through community engagement and professional expertise.</p>
+            <button class="bg-white text-primary px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100 transition-all">
+                Join Our Mission
+            </button>
+        </div>
+    </header>
+
+    <!-- Thourang Section -->
+    <section id="khourang" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Khourang</h2>
+                <p class="text-lg text-gray-600">Empowering communities through cultural preservation and sustainable practices.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="image/image/L-L3.jpg" alt="Community gathering" class="rounded-xl shadow-md w-full h-auto">
+                </div>
+                <div>
+                    <p class="text-gray-700 mb-4">Our Khourang initiative focuses on preserving cultural heritage while creating modern solutions for community development. We bridge traditional knowledge with contemporary practices.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Cultural preservation programs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Community skill development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>Sustainable resource management</span>
+                        </li>
+                    </ul>
+                    <button class="border border-primary text-primary px-5 py-2 rounded-full hover:bg-primary hover:text-white transition-colors">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lerik-leisu Section -->
+    <section id="lerik-leisu" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Lerik-leisu</h2>
+                <p class="text-lg text-gray-600">Transforming landscapes through ecological restoration and green innovation.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <p class="text-gray-700 mb-4">Lerik-leisu is our commitment to environmental sustainability. We work with communities to restore ecosystems and implement green technologies that benefit both people and planet.</p>
+                    <div class="bg-primary/10 p-6 rounded-xl mb-6">
+                        <p class="text-primary font-semibold mb-2">Current Project:</p>
+                        <p>Restoring watershed areas in partnership with local farmers using permaculture techniques.</p>
+                    </div>
+                    <button class="border border-primary text-primary px-5 py-2 rounded-full hover:bg-primary hover:text-white transition-colors">
+                        View Projects
+                    </button>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="https://picsum.photos/600/400?random=2" alt="Environmental project" class="rounded-xl shadow-md w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architects & Engineers Section -->
+    <section id="architects" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Architects & Engineers</h2>
+                <p class="text-lg text-gray-600">Designing sustainable futures through innovative infrastructure solutions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-drafting-compass text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Community Design</h3>
+                    <p class="text-gray-600">Creating spaces that foster community interaction and cultural expression.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-leaf text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Sustainable Solutions</h3>
+                    <p class="text-gray-600">Implementing eco-friendly building techniques and renewable energy systems.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-hands-helping text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Technical Training</h3>
+                    <p class="text-gray-600">Empowering local professionals with skills for sustainable development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-gradient-to-r from-primary to-teal-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">About Us</h2>
+                <p class="text-xl mb-8">MAATRA was founded in 2010 with a vision to create sustainable communities through the integration of traditional knowledge and modern expertise.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                        <div class="text-5xl font-bold mb-2">12+</div>
+                        <p>Years of Service</p>
+                    </div>
+                    <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                        <div class="text-5xl font-bold mb-2">48</div>
+                        <p>Completed Projects</p>
+                    </div>
+                    <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                        <div class="text-5xl font-bold mb-2">24</div>
+                        <p>Partner Communities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-white text-xl font-bold mb-4">MAATRA</h3>
+                    <p class="mb-4">Creating sustainable communities through cultural preservation and technical innovation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Our Work</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#khourang" class="hover:text-white transition-colors">Khourang</a></li>
+                        <li><a href="#lerik-leisu" class="hover:text-white transition-colors">Lerik-leisu</a></li>
+                        <li><a href="#architects" class="hover:text-white transition-colors">Architects & Engineers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Projects</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Community Street, Culture District</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>contact@maatra.org</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                            <span>+46 123 456 789</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 MAATRA. All rights reserved. Developed by KEHEM IT</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const menu = document.querySelector('.hidden.md\\:flex');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.toggle('flex-col');
+            menu.classList.toggle('absolute');
+            menu.classList.toggle('top-16');
+            menu.classList.toggle('left-0');
+            menu.classList.toggle('right-0');
+            menu.classList.toggle('bg-white');
+            menu.classList.toggle('py-4');
+            menu.classList.toggle('px-4');
+            menu.classList.toggle('space-y-4');
+            menu.classList.toggle('space-x-0');
+            menu.classList.toggle('shadow-lg');
+        });
+    </script>
+</body>
+</html>
