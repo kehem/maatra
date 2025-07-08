@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thourang - MAATRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4b5563',
+                        secondary: '#9ca3af',
+                        accent: '#6b7280'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 600px;
+        }
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .carousel-item.active {
+            opacity: 1;
+        }
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            text-align: center;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .project-item:hover .project-overlay {
+            opacity: 1;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                    <img src="image/maatra_c.png" alt="maatra circle logo" class="relative w-12" /> MAATRA
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#lerik-leisu" class="text-slate-700 hover:text-primary transition duration-300 py-2">Lerik Leisu</a>
+                    <a href="thourang.html" class="text-primary font-semibold py-2">Thourang</a>
+                    <a href="index.html#architectural-design" class="text-slate-700 hover:text-primary transition duration-300 py-2">Architectural Design</a>
+                    <a href="index.html#photo-gallery" class="text-slate-700 hover:text-primary transition duration-300 py-2">Photo Gallery</a>
+                    <a href="index.html#contact" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-accent transition duration-300">Contact</a>
+                </div>
+                <button id="menuBtn" class="md:hidden text-slate-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-3 bg-white rounded-lg shadow-lg p-4">
+                <a href="index.html#lerik-leisu" class="block py-2 px-4 text-slate-700 hover:bg-gray-100 rounded transition">Lerik Leisu</a>
+                <a href="thourang.html" class="block py-2 px-4 text-primary font-semibold rounded">Thourang</a>
+                <a href="index.html#architectural-design" class="block py-2 px-4 text-slate-700 hover:bg-gray-100 rounded transition">Architectural Design</a>
+                <a href="index.html#photo-gallery" class="block py-2 px-4 text-slate-700 hover:bg-gray-100 rounded transition">Photo Gallery</a>
+                <a href="index.html#contact" class="block py-2 px-4 bg-primary text-white rounded-lg text-center hover:bg-accent transition">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carousel Hero Section -->
+    <section class="carousel">
+        <div class="carousel-item active">
+            <img src="image/1.jpg" alt="Manipuri Festival" class="w-full h-full object-cover" width="1920" height="600">
+            <div class="carousel-caption">
+                <h1 class="text-3xl md:text-4xl font-bold text-white">Manipuri Festival</h1>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">Vivid photography capturing the spirit of Manipuri cultural celebrations.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="image/2.jpg" alt="Village Aerial" class="w-full h-full object-cover" width="1920" height="600">
+            <div class="carousel-caption">
+                <h1 class="text-3xl md:text-4xl font-bold text-white">Village Aerial</h1>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">Drone footage revealing the evolving landscapes of rural Manipur.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="image/3.jpg" alt="Cultural Documentary" class="w-full h-full object-cover" width="1920" height="600">
+            <div class="carousel-caption">
+                <h1 class="text-3xl md:text-4xl font-bold text-white">Cultural Documentary</h1>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">Films that preserve and share the rich stories of Manipuri heritage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Thourang Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">About Thourang</h2>
+                <div class="h-1 w-20 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-slate-600 mb-8">
+                    Thourang, a cornerstone of MAATRA, is dedicated to preserving Manipuri heritage through visual storytelling. Our mission is to capture the essence of cultural traditions using photography, drone footage, documentaries, and exhibitions. By blending traditional narratives with modern techniques, we create compelling visual experiences that connect communities to their roots. Thourang aims to document the vibrant festivals, evolving rural landscapes, and intricate craftsmanship of Manipur, ensuring these stories resonate with future generations. Our work fosters cultural pride and awareness through carefully curated projects that honor authenticity and creativity.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">What We Do</h2>
+                <div class="h-1 w-20 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-slate-600">
+                    Thourang captures and preserves cultural narratives through innovative visual mediums, blending tradition with modern storytelling.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 hover-scale">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Photography</h3>
+                    <p class="text-slate-600">Evocative imagery capturing the essence of Manipuri culture.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 hover-scale">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Drone Footage</h3>
+                    <p class="text-slate-600">Aerial views showcasing the transformation of rural landscapes.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 hover-scale">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Documentaries</h3>
+                    <p class="text-slate-600">Films that preserve and share cultural narratives.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 hover-scale">
+                    <h3 class="text-xl font-semibold text-primary mb-3">Exhibitions</h3>
+                    <p class="text-slate-600">Curating events to promote cultural preservation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Our Projects</h2>
+                <div class="h-1 w-20 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    Explore our curated projects that celebrate Manipuri heritage through visual storytelling.
+                </p>
+            </div>
+            <div class="project-grid">
+                <div class="project-item hover-scale">
+                    <img src="image/1.jpg" alt="Festival of Colors" class="w-full h-96 object-cover" width="600" height="400">
+                    <div class="project-overlay">
+                        <h3 class="text-white font-semibold text-lg">Festival of Colors</h3>
+                        <p class="text-gray-300 text-sm">
+                            This documentary captures the vibrant essence of Manipuri festivals, focusing on the intricate traditional dances and rituals that define the region's cultural identity. Through vivid cinematography, we showcase the energy of celebrations like Yaoshang and Lai Haraoba, where communities come together in colorful displays of music, dance, and devotion. The project highlights the significance of these festivals in preserving Manipuri heritage, featuring interviews with local elders and performers to provide deeper insights into their historical and cultural importance. By combining dynamic visuals with authentic narratives, Festival of Colors offers a window into the heart of Manipur’s festive spirit, fostering appreciation for its traditions. (110 words)
+                        </p>
+                    </div>
+                </div>
+                <div class="project-item hover-scale">
+                    <img src="image/2.jpg" alt="Village Horizons" class="w-full h-96 object-cover" width="600" height="400">
+                    <div class="project-overlay">
+                        <h3 class="text-white font-semibold text-lg">Village Horizons</h3>
+                        <p class="text-gray-300 text-sm">
+                            Village Horizons is a drone-based visual project documenting the transformation of rural Manipuri villages over a decade. Using aerial footage, we capture the evolving landscapes, from traditional thatched homes to modern infrastructure, reflecting the region’s socio-economic changes. The project emphasizes the balance between preserving cultural heritage and embracing development, showcasing how villages maintain their identity amidst modernization. Interviews with residents provide personal stories of change, while stunning visuals highlight the natural beauty of Manipur’s countryside. This project aims to preserve the visual history of these communities, offering a unique perspective on their growth and resilience. (96 words)
+                        </p>
+                    </div>
+                </div>
+                <div class="project-item hover-scale">
+                    <img src="image/3.jpg" alt="Heritage Tales" class="w-full h-96 object-cover" width="600" height="400">
+                    <div class="project-overlay">
+                        <h3 class="text-white font-semibold text-lg">Heritage Tales</h3>
+                        <p class="text-gray-300 text-sm">
+                            Heritage Tales is a series of short films exploring the oral histories of Manipuri communities. Each film delves into the myths, legends, and traditions passed down through generations, capturing the voices of elders and storytellers. The project combines intimate interviews with cinematic visuals to bring these stories to life, preserving narratives that are at risk of fading. By focusing on the cultural significance of oral traditions, Heritage Tales fosters a deeper understanding of Manipur’s rich heritage, connecting younger generations with their roots through compelling storytelling. (85 words)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <img src="image/maatra_c.png" alt="maatra circle logo" class="relative w-12" /> MAATRA
+                    </h4>
+                    <p class="text-gray-300 mb-4">Cultural and architectural excellence through innovative design that honors tradition.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#lerik-leisu" class="text-gray-300 hover:text-white transition">Lerik Leisu</a></li>
+                        <li><a href="thourang.html" class="text-secondary transition">Thourang</a></li>
+                        <li><a href="index.html#architectural-design" class="text-gray-300 hover:text-white transition">Architectural Design</a></li>
+                        <li><a href="index.html#photo-gallery" class="text-gray-300 hover:text-white transition">Photo Gallery</a></li>
+                        <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Thourang Services</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300">Photography</li>
+                        <li class="text-gray-300">Drone Footage</li>
+                        <li class="text-gray-300">Documentaries</li>
+                        <li class="text-gray-300">Exhibitions</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">Subscribe for Thourang updates and cultural insights.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-gray-800">
+                        <button class="bg-accent px-4 py-2 rounded-r-lg hover:bg-gray-900 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>© 2023 MAATRA Design Studio. All rights reserved. Developed by KEHEM IT</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel functionality
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            carouselItems.forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % carouselItems.length;
+            showSlide(currentSlide);
+        }
+
+        // Auto-slide every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Initial display
+        showSlide(currentSlide);
+
+        // Navigation functionality
+        document.getElementById('menuBtn')?.addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    document.getElementById('mobileMenu')?.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
