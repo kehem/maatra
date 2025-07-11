@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -52,41 +53,6 @@
             background: rgba(0, 0, 0, 0.7);
             padding: 2rem;
             text-align: center;
-        }
-        .project-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-        @media (min-width: 768px) {
-            .project-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        .project-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .project-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 1rem;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-        .project-item:hover .project-overlay {
-            opacity: 1;
-        }
-        .hover-scale {
-            transition: transform 0.3s ease-in-out;
-        }
-        .hover-scale:hover {
-            transform: scale(1.05);
         }
     </style>
 </head>
@@ -192,28 +158,28 @@
     <section id="projects" class="py-16 bg-gradient-to-b from-gray-50 to-gray-100">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-800 mb-4">What We Do</h2>
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Our Projects</h2>
                 <div class="h-1 w-20 bg-primary mx-auto mb-6"></div>
-                <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
                     Discover our projects celebrating Manipuri heritage through captivating visual storytelling.
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white bg-opacity-90 rounded-xl shadow-sm p-6 transition-all duration-300 hover:shadow-md">
+                <div class="bg-white bg-opacity-90 rounded-xl shadow-sm p-6 transition-all duration-300 hover:shadow-md" data-sr-id="project-1">
                     <img src="image/1.jpg" alt="Festival of Colors" class="w-full h-56 object-cover rounded-lg mb-4" width="600" height="400">
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Festival of Colors</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
                         A documentary capturing the vibrant essence of Manipuri festivals like Yaoshang and Lai Haraoba, showcasing traditional dances, rituals, and community spirit through vivid cinematography and interviews with local elders.
                     </p>
                 </div>
-                <div class="bg-white bg-opacity-90 rounded-xl shadow-sm p-6 transition-all duration-300 hover:shadow-md">
+                <div class="bg-white bg-opacity-90 rounded-xl shadow-sm p-6 transition-all duration-300 hover:shadow-md" data-sr-id="project-2">
                     <img src="image/2.jpg" alt="Village Horizons" class="w-full h-56 object-cover rounded-lg mb-4" width="600" height="400">
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Village Horizons</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
                         A drone-based project documenting the transformation of Manipuri villages, balancing cultural heritage with modern development through stunning aerial visuals and resident stories.
                     </p>
                 </div>
-                <div class="bg-white bg-opacity-90 rounded-xl shadow-sm p-6 transition-all duration-300 hover:shadow-md">
+                <div class="bg-white bg-opacity-90 rounded-xl shadow-sm p-6 transition-all duration-300 hover:shadow-md" data-sr-id="project-3">
                     <img src="image/3.jpg" alt="Heritage Tales" class="w-full h-56 object-cover rounded-lg mb-4" width="600" height="400">
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Heritage Tales</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
@@ -316,6 +282,32 @@
                     document.getElementById('mobileMenu')?.classList.add('hidden');
                 }
             });
+        });
+
+        // ScrollReveal animations
+        ScrollReveal().reveal('[data-sr-id="project-1"]', {
+            delay: 200,
+            distance: '20px',
+            origin: 'bottom',
+            opacity: 0,
+            duration: 800,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)'
+        });
+        ScrollReveal().reveal('[data-sr-id="project-2"]', {
+            delay: 400,
+            distance: '20px',
+            origin: 'bottom',
+            opacity: 0,
+            duration: 800,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)'
+        });
+        ScrollReveal().reveal('[data-sr-id="project-3"]', {
+            delay: 600,
+            distance: '20px',
+            origin: 'bottom',
+            opacity: 0,
+            duration: 800,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)'
         });
     </script>
 </body>
