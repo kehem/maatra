@@ -175,7 +175,8 @@
 
             <!-- Slide 1 -->
             <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000">
-                <img src="image/event/new/Bishnupriya Manipuri Art Festival Banner 4.png" class="w-full h-full object-cover" alt="Event Image 1">
+                <img src="image/event/new/Bishnupriya Manipuri Art Festival Banner 4.png"
+                    class="w-full h-full object-cover" alt="Event Image 1">
             </div>
 
             <!-- Slide 2 -->
@@ -185,12 +186,14 @@
 
             <!-- Slide 3 -->
             <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-                <img src="image/event/new/Manipuri_Art_Festival.png" class="w-full h-full object-cover" alt="Event Image 3">
+                <img src="image/event/new/Manipuri_Art_Festival.png" class="w-full h-full object-cover"
+                    alt="Event Image 3">
             </div>
 
             <!-- Slide 4 -->
             <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-                <img src="image/event/new/Screenshot 2026-02-25 at 3.06.50 PM.png" class="w-full h-full object-cover" alt="Event Image 4">
+                <img src="image/event/new/Screenshot 2026-02-25 at 3.06.50 PM.png" class="w-full h-full object-cover"
+                    alt="Event Image 4">
             </div>
 
         </div>
@@ -204,10 +207,12 @@
                 Upcoming Event
             </span>
             <h2 class="text-4xl md:text-5xl font-light mt-4 leading-tight">
-                Vernacular Architecture & Cultural Dialogue 2026
+                Bishnupriya Manipuri Art Festival
             </h2>
+            <p class="text-sm text-gray-300">Photography and Painting exhinition
+                Cultural performances by community artists</p>
             <p class="mt-6 text-lg text-gray-200">
-                March 12–14, 2026 · Ranirbazar, Kamalganj
+                March 23–24, 2026 · Location: Manipuri Lalitkala Academy
             </p>
 
             <a href="https://www.facebook.com/share/1FvZ9eKBcn/"
@@ -923,33 +928,33 @@
         });
     </script>
     <script>
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
-    let slideInterval;
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        let slideInterval;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.opacity = (i === index) ? '1' : '0';
-        });
-        currentSlide = index;
-    }
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.opacity = (i === index) ? '1' : '0';
+            });
+            currentSlide = index;
+        }
 
-    function nextSlide() {
-        let next = (currentSlide + 1) % slides.length;
-        showSlide(next);
-    }
+        function nextSlide() {
+            let next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
 
-    function prevSlideFunc() {
-        let prev = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(prev);
-    }
+        function prevSlideFunc() {
+            let prev = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(prev);
+        }
 
-    document.getElementById('nextSlide').addEventListener('click', nextSlide);
-    document.getElementById('prevSlide').addEventListener('click', prevSlideFunc);
+        document.getElementById('nextSlide').addEventListener('click', nextSlide);
+        document.getElementById('prevSlide').addEventListener('click', prevSlideFunc);
 
-    // Auto slide every 5 seconds
-    slideInterval = setInterval(nextSlide, 5000);
-</script>
+        // Auto slide every 5 seconds
+        slideInterval = setInterval(nextSlide, 5000);
+    </script>
 
 </body>
 
